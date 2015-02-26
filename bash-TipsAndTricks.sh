@@ -7,7 +7,7 @@
 
 
 
-# in command line bootcamp, pick back up at: Make A Directory (mkdir)
+# in command line bootcamp, pick back up at: Moving Around (pushd, popd)
 
 
 
@@ -51,6 +51,10 @@ exit # exit the shell
 sudo # DANGER! become super user root DANGER!
 chmod # change permission modifiers
 chown # change ownership
+
+
+# help etc.
+bash -c "help set" # tells you what -p, etc. do
 
 
 # last command
