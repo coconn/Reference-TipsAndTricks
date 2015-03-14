@@ -151,6 +151,15 @@ cor.mtest <- function(mat, conf.level = 0.95) {
 }
 
 
+########################################################################
+# how to make functions show up as a string
+########################################################################
+
+tmp <- as.character(min) # can't coerce
+tmp <- as.character(substitute(min)) # can coerce!
+
+
+
 
 ########################################################################
 # print info
