@@ -130,4 +130,14 @@ rename –v 's/foo/bar/g' *
 
 
 
+# homebrew and brew cask
+# brew cask can be used to install things easily on a new comp
+# https://github.com/caskroom/homebrew-cask/blob/master/USAGE.md
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" # install homebrew
+brew install caskroom/cask/brew-cask # install cask
+brew cask search # <list of all available Casks>
+
+
+
+
 
