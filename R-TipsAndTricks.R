@@ -160,6 +160,19 @@ tmp <- as.character(substitute(min)) # can coerce!
 
 
 
+########################################################################
+# initialize data.frame
+########################################################################
+
+df <- data.frame(Date=as.Date(character()),
+                 File=character(), 
+                 User=character(), 
+                 stringsAsFactors=FALSE) 
+
+# alternatively
+nodata <- as.data.frame(setNames(replicate(5,numeric(0), simplify = F), letters[1:5]))
+
+
 
 ########################################################################
 # print info
