@@ -7,7 +7,7 @@
 
 
 
-# in command line bootcamp, pick back up at: Moving Around (pushd, popd)
+# in command line bootcamp, pick back up at: Pipes and Redirection
 
 
 
@@ -93,14 +93,39 @@ ls -lS
 
 # create and delete files, folders
 mkdir foldername # new folder
+mkdir -p i/like/icecream # all 3 get created
 rmdir foldername # delete folder if folder is empty
+rm -r DirName # remove directory that unix thinks isn't empty
 mkdir myfolder{1,2,3} # create three at once
 
 touch filename # new file
+touch file.txt # new empty file
+
 rm filename # delete file
 rm * # delete everything in the folder
 rm –rf filename.* # delete files and folders, including in subdirectories
 
+# move around between recently visited folders
+pushd i/like # list a place
+popd  # don't list a place; go to last dir you pushd'd
+
+# copy files
+# be careful - cp will overwrite files that exist
+cp iamcool.txt newcopyofiamcool.txt # copy source, target
+# copy into a different directory
+cp awesome.txt DirToCopyAwesome/ # only if DirToCopyAwesome already exists
+cp -r DirToCopyAwesome NewDirToCopyAwesome # if want to copy a directory
+
+# move files (actually renaming them)
+mv awesome.txt uncool.txt # awesome is gone, uncool appears
+mv newplace oldplace # same with folders
+
+# display files
+less filename.txt
+more filename.txt
+# space bar to move through the file, w to move back up the file, q to quit looking
+cat filename.txt # shows entire thing
+cat filename.txt anotherfile.txt # spews out both
 
 # chain commands with > or |
 cat filename.list | grep keyword > filefound.list
@@ -127,7 +152,6 @@ grep -m NUM # stop grep after NUM matches
 
 # rename things
 rename –v 's/foo/bar/g' *
-
 
 
 # homebrew and brew cask
