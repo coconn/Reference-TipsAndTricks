@@ -158,6 +158,12 @@ cor.mtest <- function(mat, conf.level = 0.95) {
 tmp <- as.character(min) # can't coerce
 tmp <- as.character(substitute(min)) # can coerce!
 
+# other string stuff - grep with multiple patterns
+toMatch <- c("A1", "A9", "A6")
+matches <- unique (grep(paste(toMatch,collapse="|"), 
+                        "bjewkfmmlxsbjbkjnslA6kfnlefl", value=TRUE))
+
+
 
 
 ########################################################################
